@@ -1,0 +1,301 @@
+/* ============================================
+   RESPONSIVE STYLES
+============================================ */
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px to 991px) */
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        border-radius: 8px;
+    }
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+    .hero-banner .lead {
+        font-size: 1rem;
+    }
+    .btn-dark-mode {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+}
+
+
+/* Small devices (phones, 576px to 767px) */
+
+@media (max-width: 767px) {
+    .hero-banner {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .hero-banner h1 {
+        font-size: 1.5rem;
+    }
+    .hero-banner .lead {
+        font-size: 0.9rem;
+    }
+    .hero-banner .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    .quick-action {
+        padding: 0.75rem;
+    }
+    .quick-action i {
+        font-size: 1.25rem;
+    }
+    .quick-action span {
+        font-size: 0.75rem;
+    }
+    .card {
+        border-radius: 16px;
+    }
+    .card-body {
+        padding: 1rem;
+    }
+    .statistics-cards .col-md-3 {
+        margin-bottom: 0.75rem;
+    }
+    .payment-methods-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+    .provider-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+    .provider-card {
+        padding: 0.75rem;
+    }
+    .provider-card img {
+        width: 40px;
+        height: 40px;
+    }
+    .provider-card span {
+        font-size: 0.75rem;
+    }
+    .history-table {
+        font-size: 0.875rem;
+    }
+    .history-table thead {
+        display: none;
+    }
+    .history-table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--gray-200);
+        border-radius: 12px;
+        padding: 0.75rem;
+    }
+    .history-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border: none;
+    }
+    .history-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--gray-600);
+    }
+    .semester-table {
+        font-size: 0.875rem;
+    }
+    .semester-table th,
+    .semester-table td {
+        padding: 0.5rem;
+    }
+    .semester-table .form-check-input {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+    .bill-detail {
+        padding: 1rem;
+    }
+    .payment-method {
+        padding: 0.75rem 1rem;
+    }
+    .payment-method i {
+        font-size: 1.25rem;
+    }
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    .success-modal .modal-content {
+        padding: 1rem;
+    }
+    .toast-custom {
+        min-width: auto;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .btn-chat-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .btn-chat-floating i {
+        font-size: 1.25rem;
+    }
+    .btn-back-top {
+        bottom: 5rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+    .btn-back-top i {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+
+@media (max-width: 575px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+    .provider-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .hero-banner h1 {
+        font-size: 1.25rem;
+    }
+    .hero-banner .lead {
+        font-size: 0.8rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.875rem;
+    }
+    .form-control {
+        font-size: 0.875rem;
+    }
+    .form-label {
+        font-size: 0.875rem;
+    }
+    .modal-title {
+        font-size: 1.1rem;
+    }
+    .badge-status {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+    .qris-countdown {
+        font-size: 1.5rem;
+    }
+    .semester-table {
+        font-size: 0.8rem;
+    }
+    .semester-table th,
+    .semester-table td {
+        padding: 0.3rem;
+    }
+}
+
+
+/* Print styles */
+
+@media print {
+    .glass-navbar,
+    .btn-chat-floating,
+    .btn-back-top,
+    .btn-dark-mode,
+    .btn-print,
+    .btn-pdf {
+        display: none !important;
+    }
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    body {
+        background: white !important;
+    }
+}
+
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+
+/* Focus states */
+
+*:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+
+/* Skip to content */
+
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skip-to-content:focus {
+    top: 1rem;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

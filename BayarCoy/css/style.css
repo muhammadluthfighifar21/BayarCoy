@@ -1,0 +1,1334 @@
+/* ============================================
+   ROOT VARIABLES
+============================================ */
+
+:root {
+    --primary: #0d6e4d;
+    --primary-dark: #0a5239;
+    --primary-light: #19a87e;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --white: #ffffff;
+    --black: #000000;
+    /* Light Mode Colors */
+    --bg-body: #f0f4f8;
+    --text-color: #1a1a2e;
+    --text-muted: #6c757d;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.05);
+    --navbar-bg: rgba(255, 255, 255, 0.92);
+    --input-bg: #ffffff;
+    --input-border: #dee2e6;
+    --table-stripe: #f8f9fa;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+    --radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ============================================
+   DARK MODE - SEMUA WARNA DIGANTI
+============================================ */
+
+body.dark-mode {
+    --bg-body: #0d1117;
+    --text-color: #e6edf3;
+    --text-muted: #8b949e;
+    --card-bg: #161b22;
+    --card-border: #30363d;
+    --navbar-bg: rgba(22, 27, 34, 0.95);
+    --input-bg: #0d1117;
+    --input-border: #30363d;
+    --table-stripe: #161b22;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
+    --gray-100: #161b22;
+    --gray-200: #21262d;
+    --gray-300: #30363d;
+    --gray-400: #484f58;
+    --gray-500: #8b949e;
+    --gray-600: #b1bac4;
+    --gray-700: #d1d9e0;
+    --gray-800: #e6edf3;
+    --gray-900: #f0f6fc;
+}
+
+
+/* ============================================
+   BODY - PASTIKAN WARNA TERAPLIKASI
+============================================ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-body);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* ============================================
+   DARK MODE - SEMUA ELEMEN TEXT
+============================================ */
+
+body.dark-mode {
+    background: var(--bg-body);
+    color: var(--text-color);
+}
+
+
+/* Semua heading */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-color);
+}
+
+
+/* Semua paragraph dan teks */
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode div:not(.toast):not(.modal):not(.dropdown),
+body.dark-mode label,
+body.dark-mode small,
+body.dark-mode strong,
+body.dark-mode b,
+body.dark-mode td,
+body.dark-mode th {
+    color: var(--text-color);
+}
+
+
+/* Text muted */
+
+body.dark-mode .text-muted {
+    color: var(--text-muted) !important;
+}
+
+
+/* ============================================
+   NAVBAR DARK MODE
+============================================ */
+
+body.dark-mode .glass-navbar {
+    background: var(--navbar-bg) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+body.dark-mode .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .navbar-brand .text-success {
+    color: var(--primary-light) !important;
+}
+
+body.dark-mode .nav-link {
+    color: var(--gray-500) !important;
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--primary-light) !important;
+    background: rgba(25, 168, 126, 0.15);
+}
+
+body.dark-mode .nav-link.active {
+    color: var(--white) !important;
+    background: var(--primary);
+}
+
+body.dark-mode .nav-link i {
+    color: inherit !important;
+}
+
+
+/* ============================================
+   CARDS DARK MODE
+============================================ */
+
+body.dark-mode .card {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: var(--shadow-sm);
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .card-body {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .card-title {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .card-text {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .card-header {
+    background: var(--gray-200) !important;
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .card-footer {
+    background: var(--gray-200) !important;
+    border-top: 1px solid var(--card-border);
+    color: var(--text-color) !important;
+}
+
+
+/* ============================================
+   QUICK ACTION DARK MODE
+============================================ */
+
+body.dark-mode .quick-action {
+    background: var(--card-bg) !important;
+    border: 2px solid var(--card-border);
+    color: var(--text-color) !important;
+    box-shadow: var(--shadow-sm);
+}
+
+body.dark-mode .quick-action:hover {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.1) !important;
+    box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .quick-action i {
+    color: var(--primary-light);
+}
+
+body.dark-mode .quick-action span {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   PROVIDER CARDS DARK MODE
+============================================ */
+
+body.dark-mode .provider-card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .provider-card:hover {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.1);
+}
+
+body.dark-mode .provider-card.active {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.15);
+}
+
+body.dark-mode .provider-card i {
+    color: var(--primary-light);
+}
+
+body.dark-mode .provider-card span {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   PAYMENT METHODS DARK MODE
+============================================ */
+
+body.dark-mode .payment-method {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .payment-method:hover {
+    border-color: var(--primary);
+}
+
+body.dark-mode .payment-method.selected {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.15);
+}
+
+body.dark-mode .payment-method i {
+    color: var(--primary-light);
+}
+
+body.dark-mode .payment-method strong {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   FORM DARK MODE
+============================================ */
+
+body.dark-mode .form-control {
+    background: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .form-control:focus {
+    background: var(--input-bg) !important;
+    border-color: var(--primary) !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 77, 0.25);
+}
+
+body.dark-mode .form-control::placeholder {
+    color: var(--gray-500) !important;
+}
+
+body.dark-mode .form-label {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .input-group-text {
+    background: var(--gray-200) !important;
+    border-color: var(--input-border) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .form-select {
+    background: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--text-color) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%238b949e' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+body.dark-mode .form-select option {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   TABLE DARK MODE
+============================================ */
+
+body.dark-mode .table {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .table td,
+body.dark-mode .table th {
+    color: var(--text-color) !important;
+    border-color: var(--card-border) !important;
+}
+
+body.dark-mode .table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--table-stripe);
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .table-hover>tbody>tr:hover>* {
+    --bs-table-accent-bg: rgba(13, 110, 77, 0.1);
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .table-success {
+    --bs-table-bg: rgba(13, 110, 77, 0.2);
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .table-success th {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .table-success td {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .history-table thead {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+body.dark-mode .history-table thead th {
+    color: var(--white) !important;
+}
+
+body.dark-mode .history-table tbody tr {
+    border-bottom: 1px solid var(--card-border);
+}
+
+body.dark-mode .history-table tbody td {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .history-table tbody tr:hover {
+    background: rgba(13, 110, 77, 0.08);
+}
+
+
+/* ============================================
+   BILL DETAIL DARK MODE
+============================================ */
+
+body.dark-mode .bill-detail {
+    background: var(--gray-200);
+    color: var(--text-color);
+}
+
+body.dark-mode .bill-detail p {
+    color: var(--text-color);
+}
+
+body.dark-mode .bill-detail strong {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   BUTTONS DARK MODE
+============================================ */
+
+body.dark-mode .btn {
+    color: var(--text-color);
+}
+
+body.dark-mode .btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+body.dark-mode .btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--white);
+}
+
+body.dark-mode .btn-success {
+    background: var(--success);
+    border-color: var(--success);
+    color: var(--white);
+}
+
+body.dark-mode .btn-success:hover {
+    background: #1e7e34;
+    border-color: #1e7e34;
+    color: var(--white);
+}
+
+body.dark-mode .btn-danger {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: var(--white);
+}
+
+body.dark-mode .btn-danger:hover {
+    background: #a13535;
+    border-color: #a13535;
+    color: var(--white);
+}
+
+body.dark-mode .btn-outline-primary {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+body.dark-mode .btn-outline-success {
+    color: var(--success);
+    border-color: var(--success);
+}
+
+body.dark-mode .btn-outline-success:hover {
+    background: var(--success);
+    border-color: var(--success);
+    color: var(--white);
+}
+
+body.dark-mode .btn-outline-danger {
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+body.dark-mode .btn-outline-danger:hover {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: var(--white);
+}
+
+body.dark-mode .btn-outline-secondary {
+    color: var(--gray-500);
+    border-color: var(--gray-400);
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+    background: var(--gray-400);
+    border-color: var(--gray-400);
+    color: var(--white);
+}
+
+
+/* ============================================
+   BADGES DARK MODE
+============================================ */
+
+body.dark-mode .badge {
+    color: var(--white);
+}
+
+body.dark-mode .badge.bg-success {
+    background: #1a7a3a !important;
+}
+
+body.dark-mode .badge.bg-danger {
+    background: #a13535 !important;
+}
+
+body.dark-mode .badge.bg-warning {
+    background: #8a6d1f !important;
+    color: var(--white);
+}
+
+body.dark-mode .badge.bg-info {
+    background: #0f6a7a !important;
+}
+
+body.dark-mode .badge.bg-primary {
+    background: var(--primary) !important;
+}
+
+body.dark-mode .badge.bg-secondary {
+    background: var(--gray-400) !important;
+    color: var(--text-color);
+}
+
+body.dark-mode .badge-status.lunas {
+    background: rgba(40, 167, 69, 0.25);
+    color: #6fcf97;
+}
+
+body.dark-mode .badge-status.belum {
+    background: rgba(220, 53, 69, 0.25);
+    color: #f28b82;
+}
+
+body.dark-mode .badge-status.proses {
+    background: rgba(255, 193, 7, 0.25);
+    color: #f9ca24;
+}
+
+
+/* ============================================
+   ALERT DARK MODE
+============================================ */
+
+body.dark-mode .alert {
+    background: var(--gray-200);
+    border-color: var(--card-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .alert-info {
+    background: rgba(23, 162, 184, 0.2);
+    border-color: rgba(23, 162, 184, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-mode .alert-success {
+    background: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-mode .alert-danger {
+    background: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.3);
+    color: var(--text-color);
+}
+
+body.dark-mode .alert-warning {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   TOAST DARK MODE
+============================================ */
+
+body.dark-mode .toast {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .toast-body {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .toast .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+/* ============================================
+   MODAL DARK MODE
+============================================ */
+
+body.dark-mode .modal-content {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .modal-header {
+    border-bottom-color: var(--card-border) !important;
+}
+
+body.dark-mode .modal-header .modal-title {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body.dark-mode .modal-footer {
+    border-top-color: var(--card-border) !important;
+}
+
+body.dark-mode .modal-body {
+    color: var(--text-color) !important;
+}
+
+
+/* ============================================
+   ACCORDION DARK MODE
+============================================ */
+
+body.dark-mode .accordion-item {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+body.dark-mode .accordion-button {
+    background: var(--card-bg) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+body.dark-mode .accordion-button:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 77, 0.25);
+}
+
+body.dark-mode .accordion-body {
+    background: var(--gray-100) !important;
+    color: var(--text-color) !important;
+}
+
+
+/* ============================================
+   DROPDOWN DARK MODE
+============================================ */
+
+body.dark-mode .dropdown-menu {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: var(--gray-200) !important;
+    color: var(--text-color) !important;
+}
+
+
+/* ============================================
+   SEMESTER TABLE DARK MODE
+============================================ */
+
+body.dark-mode .semester-table th {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+body.dark-mode .semester-table td {
+    border-color: var(--card-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .semester-table .form-check-input {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+}
+
+body.dark-mode .semester-table .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+body.dark-mode .semester-table .form-check-input:disabled {
+    opacity: 0.5;
+}
+
+
+/* ============================================
+   GLASS NAVBAR
+============================================ */
+
+.glass-navbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.glass-navbar .navbar-brand {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.glass-navbar .nav-link {
+    color: var(--gray-700);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.glass-navbar .nav-link:hover {
+    color: var(--primary);
+    background: rgba(13, 110, 77, 0.1);
+}
+
+.glass-navbar .nav-link.active {
+    color: var(--white);
+    background: var(--primary);
+}
+
+
+/* ============================================
+   DARK MODE TOGGLE
+============================================ */
+
+.btn-dark-mode {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gray-200);
+    color: var(--text-color);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-dark-mode:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: rotate(30deg);
+}
+
+
+/* ============================================
+   CARDS
+============================================ */
+
+.card {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+}
+
+
+/* ============================================
+   HERO BANNER
+============================================ */
+
+.hero-banner {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-banner h1,
+.hero-banner p,
+.hero-banner .lead {
+    color: var(--white);
+}
+
+.hero-banner .badge {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--white) !important;
+}
+
+
+/* ============================================
+   QUICK ACTION
+============================================ */
+
+.quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.quick-action:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.quick-action i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.quick-action span {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   PROVIDER CARDS
+============================================ */
+
+.provider-card {
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.provider-card:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.provider-card.active {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.05);
+}
+
+.provider-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+
+/* ============================================
+   PAYMENT METHODS
+============================================ */
+
+.payment-method {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.payment-method:hover {
+    border-color: var(--primary);
+}
+
+.payment-method.selected {
+    border-color: var(--primary);
+    background: rgba(13, 110, 77, 0.05);
+}
+
+.payment-method i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+
+/* ============================================
+   BILL DETAIL
+============================================ */
+
+.bill-detail {
+    background: var(--gray-100);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.bill-detail p {
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   CHAT FLOATING
+============================================ */
+
+.btn-chat-floating {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.btn-chat-floating:hover {
+    transform: scale(1.1) rotate(-10deg);
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+
+/* ============================================
+   BACK TO TOP
+============================================ */
+
+.btn-back-top {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.btn-back-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-back-top:hover {
+    transform: translateY(-4px);
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+
+/* ============================================
+   STATUS BADGES
+============================================ */
+
+.badge-status {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.badge-status.lunas {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-status.belum {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.badge-status.proses {
+    background: #fff3cd;
+    color: #856404;
+}
+
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.4s ease-out;
+}
+
+
+/* ============================================
+   TRANSACTION HISTORY TABLE
+============================================ */
+
+.history-table {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.history-table thead {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.history-table thead th {
+    color: var(--white);
+}
+
+.history-table tbody tr {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.history-table tbody tr:hover {
+    background: rgba(13, 110, 77, 0.05);
+}
+
+
+/* ============================================
+   SUCCESS MODAL
+============================================ */
+
+.success-modal .modal-content {
+    border-radius: var(--radius);
+    border: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--success);
+    animation: scaleIn 0.6s ease-out;
+}
+
+
+/* ============================================
+   FAQ ACCORDION
+============================================ */
+
+.faq-accordion .accordion-item {
+    border: none;
+    margin-bottom: 0.5rem;
+    border-radius: 12px !important;
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-accordion .accordion-button {
+    background: var(--card-bg);
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    color: var(--text-color);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.faq-accordion .accordion-body {
+    padding: 1.5rem;
+    background: var(--gray-100);
+    color: var(--text-color);
+}
+
+
+/* ============================================
+   SEMESTER TABLE
+============================================ */
+
+.semester-table {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.semester-table th {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+}
+
+.semester-table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.semester-table .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/* ============================================
+   PROFILE SECTION
+============================================ */
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ============================================
+   SKELETON LOADING
+============================================ */
+
+.skeleton {
+    background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-300) 50%, var(--gray-200) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton-text {
+    height: 16px;
+    margin: 8px 0;
+}
+
+.skeleton-title {
+    height: 28px;
+    width: 60%;
+    margin: 12px 0;
+}
+
+.skeleton-card {
+    height: 200px;
+    border-radius: var(--radius);
+}
+
+
+/* ============================================
+   TOAST NOTIFICATIONS
+============================================ */
+
+.toast-custom {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border-left: 5px solid var(--primary);
+    padding: 1rem 1.5rem;
+    min-width: 300px;
+    animation: slideInRight 0.5s ease-out;
+    color: var(--text-color);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ============================================
+   SCROLLBAR DARK MODE
+============================================ */
+
+body.dark-mode ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: 5px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+body.dark-mode ::selection {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* ============================================
+   RESPONSIVE FIXES
+============================================ */
+
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 2rem 1.5rem;
+    }
+    .hero-banner h1 {
+        font-size: 1.5rem;
+    }
+    .quick-action {
+        padding: 1rem;
+    }
+    .quick-action i {
+        font-size: 1.5rem;
+    }
+    .btn-chat-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .btn-back-top {
+        bottom: 5rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+*:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
